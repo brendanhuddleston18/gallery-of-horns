@@ -1,10 +1,10 @@
-# PROJECT NAME
+# Lab 01 Horned Beasts
 
-Project description goes here.
+Using react I render data on a page for the first time
 
 ## Accessibility Report
 
-Provide a screenshot of your score after running a Lighthouse Accessibility report.
+![lighthouse](lighthouseImg/lighthouselab01.png)
 
 ## Getting Started
 
