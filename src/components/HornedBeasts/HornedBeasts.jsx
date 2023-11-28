@@ -1,5 +1,5 @@
 import React from 'react';
-import Gallery from '../Gallery/Gallery.jsx';
+// import Gallery from '../Gallery/Gallery.jsx';
 import styles from './HornedBeasts.module.css';
 
 function HornedBeasts(props) {
