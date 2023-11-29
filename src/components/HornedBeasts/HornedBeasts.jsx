@@ -8,17 +8,24 @@ import Col from 'react-bootstrap/Col';
 
 function HornedBeasts(props) {
 
-  const [visible, setVisible] = useState("block");
+  
+  const [rotation, setRotation] = useState(0);
   const [votes, setVotes] = useState(0);
+
+  function rotateImg(){
+    setRotation(rotation + 45)
+  }
+
   function favorite(){
     setVotes(votes+1)
-    setVisible("none");
+    setRotation(360)
   }
 
   return (   
     <Col key={props.key} xs="12" md="auto">
-      <Card style={{ width: '18rem', height: '35rem', marginBottom: '16px'}}>
-        <Card.Img variant="top" src={props.src} />
+      <Card style={{ width: '18rem', height: '40rem', marginBottom: '16px'}}>
+        {/* chat gpt helped me with image rotation */}
+        <Card.Img variant="top" src={props.src} style={{ transform: `rotate(${rotation}deg)`, transition: 'transform 1.0s' }}/>
         <Card.Body>
           <Card.Title>{props.title}</Card.Title>
           <Card.Text>
