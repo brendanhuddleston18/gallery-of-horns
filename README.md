@@ -6,6 +6,8 @@ Using react I render data on a page for the first time
 
 ![lighthouse](lighthouseImg/lighthouselab01.png)
 
+![lighthouse2](lighthouseImg/lighthouselab02.png)
+
 ## Getting Started
 
 ### Requirements
@@ -56,6 +58,6 @@ List collaborators here.
 
 - Start time: 5:29pm CST
 
-- Finish time: _____
+- Finish time: 8:26pm CST
 
-- Actual time needed to complete: _____
+- Actual time needed to complete: 2hrs57min
