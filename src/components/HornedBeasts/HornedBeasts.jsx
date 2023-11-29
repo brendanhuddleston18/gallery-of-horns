@@ -18,8 +18,8 @@ function HornedBeasts(props) {
         <img src={props.src} alt={props.description} title={props.title}></img>
         <p>{props.description}</p>
         <p>Horns: {props.horns}</p>
-        <button style={{display: `${visible}`}}onClick={favorite}>Favorite</button>
         <p><strong>This animal has {votes} votes!</strong></p>
+        <button style={{display: `${visible}`}}onClick={favorite}>{'\u2764'}</button>
       </div>
     </>
   )
