@@ -23,7 +23,7 @@ function HornedBeasts(props) {
 
   return (   
     <Col key={props.key} xs="12" md="auto">
-      <Card style={{ width: '18rem', height: '40rem', marginBottom: '16px'}}>
+      <Card className = {styles.card}style={{ width: '18rem', height: '40rem', marginBottom: '16px'}}>
         {/* chat gpt helped me with image rotation */}
         <Card.Img variant="top" src={props.src} alt={props.description} style={{ transform: `rotate(${rotation}deg)`, transition: 'transform 1.0s' }}/>
         <Card.Body className={styles.cardBody}>
