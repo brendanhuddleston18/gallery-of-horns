@@ -9,11 +9,11 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 function App(){
 
   return(
-    <>
+    <div>
       <Header />
       <Gallery beasts={beasts}/>
       <Footer />
-    </>
+    </div>
   )
 }
 

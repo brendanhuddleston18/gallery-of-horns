@@ -16,19 +16,22 @@ function HornedBeasts(props) {
   }
 
   return (   
+    <Col key={props.key} xs="12" md="auto">
+      <Card style={{ width: '18rem', height: '35rem', marginBottom: '16px'}}>
+        <Card.Img variant="top" src={props.src} />
+        <Card.Body>
+          <Card.Title>{props.title}</Card.Title>
+          <Card.Text>
+            <p>Horns: {props.horns}</p>
+            {props.description}
+          </Card.Text>
+          <button onClick={favorite} variant="primary">{'\u2764'}{votes}</button>
+        </Card.Body>
+      </Card>
+    </Col>
+      )
     
-    <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src={props.src} />
-      <Card.Body>
-      <Card.Title>{props.title}</Card.Title>
-      <Card.Text>
-      <p>Horns: {props.horns}</p>
-      {props.description}
-      <p><strong>This animal has  votes!</strong></p>
-      </Card.Text>
-      <button onClick={favorite} variant="primary">{'\u2764'}{votes}</button>
-    </Card.Body>
-  </Card>
+    }
       /* <div className={styles.hornedBeasts}>
         <h2>{props.title}</h2>
         <img src={props.src} alt={props.description} title={props.title}></img>
@@ -37,8 +40,5 @@ function HornedBeasts(props) {
         <p><strong>This animal has {votes} votes!</strong></p>
         <button style={{display: `${visible}`}}onClick={favorite}>{'\u2764'}</button>
       </div> */
-  )
-
-}
 
 export default HornedBeasts;
