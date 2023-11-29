@@ -52,7 +52,9 @@ List collaborators here.
 
 ## Time Estimate 
 
-- Number and name of feature: ________________________________
+### Lab 02
+
+- Number and name of feature: Lab 02 
 
 - Estimate of time needed to complete: 4hrs
 
@@ -61,3 +63,15 @@ List collaborators here.
 - Finish time: 8:26pm CST
 
 - Actual time needed to complete: 2hrs57min
+
+### Lab 03 
+
+Number and name of feature: Lab 03
+
+Estimate of time needed to complete: 4
+
+Start time: 4:33pm CST
+
+Finish time: 
+
+Actual time needed to complete: 
