@@ -52,9 +52,9 @@ List collaborators here.
 
 - Number and name of feature: ________________________________
 
-- Estimate of time needed to complete: _____
+- Estimate of time needed to complete: 4hrs
 
-- Start time: _____
+- Start time: 5:29pm CST
 
 - Finish time: _____
 
