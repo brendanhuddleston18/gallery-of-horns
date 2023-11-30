@@ -26,7 +26,7 @@ function Gallery(props) {
   // let selectedBeast = selectBeasts()
     // console.log(selectedBeast);
   return (
-    <>
+    <div className={styles.Gallery}>
         <Container className={styles.Container} fluid>
           <Row className={styles.row}>
             {props.beasts.map((beast) => (
@@ -40,7 +40,7 @@ function Gallery(props) {
             ))}
           </Row>
         </Container>
-      <SelectedBeasts 
+      <SelectedBeasts className={styles.Modal} 
                 // onClick={handleClick}
                 // state={props.state}
                 showModal={props.showModal} 
@@ -49,7 +49,7 @@ function Gallery(props) {
                 beastArray={beastArray}
                 selectedBeast={selectedBeasts}
                 />
-    </>
+      </div>
   );
 }
 

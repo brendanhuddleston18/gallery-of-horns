@@ -13,7 +13,7 @@ function App(){
 
   function showModal(){
     console.log('hello world'); 
-    setDisplay('block');
+    setDisplay('inline-block');
   }
 
   function hideModal(){
