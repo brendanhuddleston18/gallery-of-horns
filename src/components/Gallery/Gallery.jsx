@@ -14,12 +14,7 @@ function Gallery(props) {
     return value;
   });
 
-  const [selectedBeasts, setBeasts] = useState(null);
 
-  function selectBeasts(choice) {
-    setBeasts(choice);
-    console.log(choice);
-  }
 
   // let selectedBeast = selectBeasts()
   // console.log(selectedBeast);
@@ -32,13 +27,13 @@ function Gallery(props) {
               key={beast._id}
               beast={beast}
               // state={props.state}
-              selectBeasts={selectBeasts}
+              selectBeasts={props.selectBeasts}
               showModal={props.showModal}
             />
           ))}
         </Row>
       </Container>
-      <SelectedBeasts
+      {/* <SelectedBeasts
         className={styles.Modal}
         // onClick={handleClick}
         // state={props.state}
@@ -47,7 +42,7 @@ function Gallery(props) {
         hideModal={props.hideModal}
         beastArray={beastArray}
         selectedBeast={selectedBeasts}
-      />
+      /> */}
     </div>
   );
 }

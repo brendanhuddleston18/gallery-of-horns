@@ -10,19 +10,17 @@ function HornedBeasts(props) {
 
   
   const [rotation, setRotation] = useState(0);
-  const [votes, setVotes] = useState(0);
+  
 
   function rotateImg(){
     setRotation(rotation + 45)
   }
+  
 
-  function favorite(){
-    setVotes(votes+1)
-    setRotation(360)
-  }
-
+  
   function handleClick(){
-   props.selectBeasts(props.beast);  
+    props.selectBeasts(props.beast);  
+    setRotation(360)
   }
 
 
@@ -32,7 +30,7 @@ function HornedBeasts(props) {
         {/* chat gpt helped me with image rotation */}
         <Card.Img onClick={()=> handleClick()}variant="top" src={props.beast.image_url} alt={props.beast.description} style={{ transform: `rotate(${rotation}deg)`, transition: 'transform 1.0s' }}/>
        
-          <button style ={{width: '3rm', heigh: '3rm'} } onClick={favorite} variant="primary">{'\u2764'}{votes}</button>
+          
       </Card>
     </Col>
       )  
