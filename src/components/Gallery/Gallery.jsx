@@ -10,29 +10,45 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
 function Gallery(props) {
+  
+  
+  let beastArray = props.beasts.map((value) => {
+    return value;
+    })
 
+    const [selectedBeasts, setBeasts] = useState(null);
 
+    function selectBeasts(choice){
+      setBeasts(choice);
+      console.log(choice);
+    }
 
+  // let selectedBeast = selectBeasts()
+    // console.log(selectedBeast);
   return (
     <>
         <Container className={styles.Container} fluid>
           <Row className={styles.row}>
-            {props.beasts.map((beasts, index) => (
+            {props.beasts.map((beast) => (
               <HornedBeasts
-                key={beasts._id}
-                src={beasts.image_url}
-                title={beasts.title}
-                description={beasts.description}
-                keyword={beasts.keyword}
-                horns={beasts.horns}
-                // onClick={handleClick}
+                key={beast._id}
+                beast={beast}
                 // state={props.state}
-                handleClick={props.handleClick}
+                selectBeasts={selectBeasts}
+                showModal={props.showModal}
               />
             ))}
           </Row>
         </Container>
-      <SelectedBeasts handleClick={props.handleClick} />
+      <SelectedBeasts 
+                // onClick={handleClick}
+                // state={props.state}
+                showModal={props.showModal} 
+                display={props.display} 
+                hideModal={props.hideModal} 
+                beastArray={beastArray}
+                selectedBeast={selectedBeasts}
+                />
     </>
   );
 }

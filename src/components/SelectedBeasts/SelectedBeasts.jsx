@@ -6,21 +6,22 @@ import { propTypes } from "react-bootstrap/esm/Image";
 
 function BeastsModal(props) {
 
-  
+  console.log(props)
   return (
-    <div className={styles.BeastsModal} style={{ display: "block" }}>
+    <div className={styles.BeastsModal} style={{ display:props.display }}>
       <Modal.Dialog>
-        <Modal.Header closeButton>
-          <Modal.Title>Modal title</Modal.Title>
+        <Modal.Header>
+          <Modal.Title>{props.selectedBeast?.title}</Modal.Title>
         </Modal.Header>
 
         <Modal.Body>
-          <p>Howdy</p>
+          {/* <Modal.Img src={props.selectedBeast?.image_url}/> */}
+          <p>{props.selectedBeast?.description}</p>
         </Modal.Body>
 
         <Modal.Footer>
-          <Button onClick={props.handleClick}variant="secondary">Close</Button>
-          <Button variant="primary">Save changes</Button>
+          <Button onClick={props.hideModal}variant="primary">Close</Button>
+          
         </Modal.Footer>
       </Modal.Dialog>
     </div>
