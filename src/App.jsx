@@ -7,11 +7,18 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 function App(){
+  
+  const [display, setDisplay] = useState('none');
+
+  function handleClick(){
+    console.log('hello world');
+  }
+
 
   return(
     <div>
       <Header />
-      <Gallery beasts={beasts}/>
+      <Gallery beasts={beasts} state={display} handleClick={handleClick}/>
       <Footer />
     </div>
   )

@@ -1,5 +1,6 @@
-import React from "react";
+import React, {useState} from "react";
 import HornedBeasts from "../HornedBeasts/HornedBeasts.jsx";
+import SelectedBeasts from "../SelectedBeasts/SelectedBeasts.jsx";
 import styles from "./Gallery.module.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Container from "react-bootstrap/Container";
@@ -9,9 +10,11 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
 function Gallery(props) {
+
+
+
   return (
     <>
-      <div className={styles.whatever}>
         <Container className={styles.Container} fluid>
           <Row className={styles.row}>
             {props.beasts.map((beasts, index) => (
@@ -22,30 +25,14 @@ function Gallery(props) {
                 description={beasts.description}
                 keyword={beasts.keyword}
                 horns={beasts.horns}
+                // onClick={handleClick}
+                // state={props.state}
+                handleClick={props.handleClick}
               />
             ))}
           </Row>
         </Container>
-      </div>
-      <div
-        className="modal show"
-        style={{ display: "block", position: "initial" }}
-      >
-        <Modal.Dialog>
-          <Modal.Header closeButton>
-            <Modal.Title>Modal title</Modal.Title>
-          </Modal.Header>
-
-          <Modal.Body>
-            <p>Modal body text goes here.</p>
-          </Modal.Body>
-
-          <Modal.Footer>
-            <Button variant="secondary">Close</Button>
-            <Button variant="primary">Save changes</Button>
-          </Modal.Footer>
-        </Modal.Dialog>
-      </div>
+      <SelectedBeasts handleClick={props.handleClick} />
     </>
   );
 }

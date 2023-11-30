@@ -1,11 +1,14 @@
 import React from "react";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
-import styles from "./Modal.module.css";
+import styles from "./SelectedBeasts.module.css";
+import { propTypes } from "react-bootstrap/esm/Image";
 
-function BeastsModal() {
+function BeastsModal(props) {
+
+  
   return (
-    <div className={styles.BeastsModal} style={{ display: "inline-block" }}>
+    <div className={styles.BeastsModal} style={{ display: "block" }}>
       <Modal.Dialog>
         <Modal.Header closeButton>
           <Modal.Title>Modal title</Modal.Title>
@@ -16,7 +19,7 @@ function BeastsModal() {
         </Modal.Body>
 
         <Modal.Footer>
-          <Button variant="secondary">Close</Button>
+          <Button onClick={props.handleClick}variant="secondary">Close</Button>
           <Button variant="primary">Save changes</Button>
         </Modal.Footer>
       </Modal.Dialog>
