@@ -5,29 +5,30 @@ import styles from "./SelectedBeasts.module.css";
 import { propTypes } from "react-bootstrap/esm/Image";
 
 function BeastsModal(props) {
-
-  console.log(props)
+  console.log(props);
   return (
-    <div className={styles.BeastsModal} style={{ display:props.display }}>
-      
-        <Modal.Header>
-          <Modal.Title>{props.selectedBeast?.title}</Modal.Title>
-        </Modal.Header>
+    <div className={styles.BeastsModal} style={{ display: props.display }}>
+      <Modal.Header>
+        <Modal.Title>{props.selectedBeast?.title}</Modal.Title>
+      </Modal.Header>
 
-        <Modal.Body>
-        <img src={props.selectedBeast?.image_url} alt={props.selectedBeast?.title} style={{ width: '100%' }} />
-          <ul>
+      <Modal.Body>
+        <img
+          src={props.selectedBeast?.image_url}
+          alt={props.selectedBeast?.title}
+          style={{ width: "40rem" }}
+        />
+        <ul>
           <li>{props.selectedBeast?.description}</li>
           <li>Horns: {props.selectedBeast?.horns}</li>
+        </ul>
+      </Modal.Body>
 
-          </ul>
-        </Modal.Body>
-
-        <Modal.Footer>
-          <Button onClick={props.hideModal}variant="primary">Close</Button>
-          
-        </Modal.Footer>
-      
+      <Modal.Footer>
+        <Button onClick={props.hideModal} variant="primary">
+          Close
+        </Button>
+      </Modal.Footer>
     </div>
   );
 }
