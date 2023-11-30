@@ -6,7 +6,7 @@
   position: relative;
 }
 
-.cardBody button {
+.card button {
   position: absolute;
   bottom: 12px;
 }

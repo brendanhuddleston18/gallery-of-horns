@@ -1,3 +1,15 @@
+.Gallery {
+  position:relative;
+  /* display: flex */
+}
+
+.Modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  
+}
+
 .row {
   display: flex;
   justify-content: center;

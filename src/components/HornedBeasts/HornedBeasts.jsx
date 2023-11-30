@@ -21,19 +21,18 @@ function HornedBeasts(props) {
     setRotation(360)
   }
 
+  function handleClick(){
+   props.selectBeasts(props.beast);  
+  }
+
+
   return (   
     <Col key={props.key} xs="12" md="auto">
-      <Card className = {styles.card}style={{ width: '18rem', height: '40rem', marginBottom: '16px'}}>
+      <Card onClick={props.showModal} className = {styles.card}style={{ width: '18rem', height: 'auto', marginBottom: '16px', cursor: 'pointer'}}>
         {/* chat gpt helped me with image rotation */}
-        <Card.Img variant="top" src={props.src} alt={props.description} style={{ transform: `rotate(${rotation}deg)`, transition: 'transform 1.0s' }}/>
-        <Card.Body className={styles.cardBody}>
-          <Card.Title>{props.title}</Card.Title>
-          <Card.Text>
-            <p>Horns: {props.horns}</p>
-            {props.description}
-          </Card.Text>
-          <button onClick={favorite} variant="primary">{'\u2764'}{votes}</button>
-        </Card.Body>
+        <Card.Img onClick={()=> handleClick()}variant="top" src={props.beast.image_url} alt={props.beast.description} style={{ transform: `rotate(${rotation}deg)`, transition: 'transform 1.0s' }}/>
+       
+          <button style ={{width: '3rm', heigh: '3rm'} } onClick={favorite} variant="primary">{'\u2764'}{votes}</button>
       </Card>
     </Col>
       )  
