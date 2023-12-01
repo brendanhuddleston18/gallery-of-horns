@@ -14,31 +14,43 @@ function Gallery(props) {
     return value;
   });
 
-  const [selectedBeasts, setBeasts] = useState(null);
 
-  function selectBeasts(choice) {
-    setBeasts(choice);
-    console.log(choice);
-  }
 
   // let selectedBeast = selectBeasts()
   // console.log(selectedBeast);
   return (
     <div className={styles.Gallery}>
       <Container className={styles.Container} fluid>
+        {props.filterHorns && props.filterHorns.length > 0 ? (
+          <Row className={styles.row}>
+          {props.filterHorns.map((beast) => (
+            <HornedBeasts
+              key={props._id}
+              beast={beast}
+              // state={props.state}
+              selectBeasts={props.selectBeasts}
+              showModal={props.showModal}
+              filterHorns={props.filterHorns}
+            />
+          ))}
+        </Row>
+        ) : (
+
         <Row className={styles.row}>
           {props.beasts.map((beast) => (
             <HornedBeasts
               key={beast._id}
               beast={beast}
               // state={props.state}
-              selectBeasts={selectBeasts}
+              selectBeasts={props.selectBeasts}
               showModal={props.showModal}
+              filterHorns={props.filterHorns}
             />
           ))}
         </Row>
+        )}
       </Container>
-      <SelectedBeasts
+      {/* <SelectedBeasts
         className={styles.Modal}
         // onClick={handleClick}
         // state={props.state}
@@ -47,7 +59,7 @@ function Gallery(props) {
         hideModal={props.hideModal}
         beastArray={beastArray}
         selectedBeast={selectedBeasts}
-      />
+      /> */}
     </div>
   );
 }

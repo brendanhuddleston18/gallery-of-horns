@@ -1,6 +1,14 @@
-/* .App {;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-} */
+div {
+  position: relative;
+  /* background-color: #dee2e6; */
+}
+
+.FormModal {
+  position:absolute;
+  left: 50%;
+
+}
+
+.selectedBeast {
+  background-color: #dee2e611;
+}
