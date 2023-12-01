@@ -1,6 +1,6 @@
 div {
   position: relative;
-  background-color: #dee2e6;
+  /* background-color: #dee2e6; */
 }
 
 .FormModal {
@@ -8,8 +8,7 @@ div {
   left: 50%;
 
 }
-/* .selectedBeast {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-} */
+
+.selectedBeast {
+  background-color: #dee2e611;
+}

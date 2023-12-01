@@ -24,15 +24,15 @@ function HornForm(props) {
 
           <Form.Check // prettier-ignore
             type={type}
-            id={` 3 Horns`}
-            label={3}
+            id={3}
+            label={'3 Horns'}
             onClick={()=>{props.handleFilter(3)}}
           />
 
           <Form.Check // prettier-ignore
             type={type}
-            id={` 100 Horns`}
-            label={100}
+            id={100}
+            label={'100 Horns'}
             onClick={()=>{props.handleFilter(100)}}
           />
         </div>
