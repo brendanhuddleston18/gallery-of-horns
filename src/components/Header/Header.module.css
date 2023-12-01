@@ -1,7 +1,17 @@
-.header {
+.Header {
   /* background-color: #e9ecef; */
   display:flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-bottom: 24px;
+  margin-bottom: 50px;
+  padding-bottom: 5px;
+  box-shadow: 0px 4px 4px 4px #ced4da;
+  /* border-bottom:2px solid #111; */
+}
+
+.BtnsCont {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }

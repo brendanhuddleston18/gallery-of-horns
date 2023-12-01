@@ -7,7 +7,6 @@ import { propTypes } from "react-bootstrap/esm/Image";
 // import { useState } from "react";
 
 function BeastsModal(props) {
-  console.log(props);
 
   const [votes, setVotes] = useState(0);
 

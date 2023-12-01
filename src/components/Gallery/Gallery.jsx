@@ -21,6 +21,21 @@ function Gallery(props) {
   return (
     <div className={styles.Gallery}>
       <Container className={styles.Container} fluid>
+        {props.filterHorns && props.filterHorns.length > 0 ? (
+          <Row className={styles.row}>
+          {props.filterHorns.map((beast) => (
+            <HornedBeasts
+              key={props._id}
+              beast={beast}
+              // state={props.state}
+              selectBeasts={props.selectBeasts}
+              showModal={props.showModal}
+              filterHorns={props.filterHorns}
+            />
+          ))}
+        </Row>
+        ) : (
+
         <Row className={styles.row}>
           {props.beasts.map((beast) => (
             <HornedBeasts
@@ -29,9 +44,11 @@ function Gallery(props) {
               // state={props.state}
               selectBeasts={props.selectBeasts}
               showModal={props.showModal}
+              filterHorns={props.filterHorns}
             />
           ))}
         </Row>
+        )}
       </Container>
       {/* <SelectedBeasts
         className={styles.Modal}

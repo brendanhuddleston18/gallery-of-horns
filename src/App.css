@@ -1,7 +1,13 @@
 div {
   position: relative;
+  background-color: #dee2e6;
 }
 
+.FormModal {
+  position:absolute;
+  left: 50%;
+
+}
 /* .selectedBeast {
   position: absolute;
   top: 50%;
