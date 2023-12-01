@@ -72,6 +72,18 @@ Estimate of time needed to complete: 4
 
 Start time: 4:33pm CST
 
-Finish time: 
+Finish time: 10:30pm CST
 
-Actual time needed to complete: 
+Actual time needed to complete: 6hrs
+
+### Lab 04
+
+Number and name of feature: Lab 04
+
+Estimate of time needed to complete: 5
+
+Start time: 4:45pm CST
+
+Finish time: 9pm CST
+
+Actual time needed to complete: 4:15
